@@ -97,9 +97,7 @@
     Q : なんかエラーでモデルのダウンロードが途中で止まってしまう！
     A : ブラウザでダウンロードした`pytorch_model.bin`をキャッシュの形式にして読み込ませることができます。
 
-
-        ・”models--rinna--japanese-gpt-neox-3.6b-instruction-sft.zip”ダウンロードして解凍のち移動
-        「models--rinna--japanese-gpt-neox-3.6b-instruction-sft」を以下のフォルダの中に移動
+        ・”models--rinna--japanese-gpt-neox-3.6b-instruction-sft.zip”ダウンロードして解凍のち以下のフォルダに移動
             -> C:\Users\{users}\.cache\huggingface\hub
 
         ・中身を開いて以下のtxtを探す
