@@ -52,24 +52,24 @@
     
 ## [Get Start!]
 
-    # 初回起動
-    
    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
+   
+   # 初回起動
 
-    `py -3.10 -m venv LLM_venv` (ここでは仮に環境名LLM_venvを作成)
+        `py -3.10 -m venv LLM_venv` (ここでは仮に環境名LLM_venvを作成)
     
-    `.\LLM_venv\Scripts\Activate.bat`
+         `.\LLM_venv\Scripts\Activate.bat`
 
-    `pip install -r requirements.txt`
+         `pip install -r requirements.txt`
 
-    `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117'
+         `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117'
  
-    'python dialog.py'
+         'python dialog.py'
 
     起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされます。
    
-
-    # 次回以降の起動手順
+   
+   # 次回以降の起動手順
          `cd C:\{dialog.pyを保存したフォルダ}`
          
          `.\{初回起動時に作成したvenvフォルダ}LLM_venv\Scripts\Activate.bat`
