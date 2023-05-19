@@ -103,7 +103,7 @@
         ・中身を開いて以下のtxtを探す
           models--rinna--japanese-gpt-neox-3.6b-instruction-sft\blobs\0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b.txt
 
-        ・事前にブラウザ等でダウンロードした`pytorch_model.bin`を「0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b」にリネーム
+        ・`pytorch_model.bin`を「0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b」にリネーム
 
         ・最後にtxtファイルをゴミ箱へいれて完了
 
