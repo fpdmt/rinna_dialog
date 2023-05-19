@@ -107,6 +107,6 @@
 
         ・最後にtxtファイルをゴミ箱へいれて完了
 
-        ### <完成例>
-        ![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/a4b3d511-2c97-4888-aa7a-280ed30415cd)
+    ### <完成例>
+    ![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/a4b3d511-2c97-4888-aa7a-280ed30415cd)
 
