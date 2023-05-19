@@ -1,7 +1,8 @@
 # ***rinna_dialog***
 
 ## [概要]
-    *[rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
+
+    *[rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.com/rinna/japanese-gpt-neox-3.6b-instruction-sft)
     
     対話型にファインチューニングされたrinna3.6B-instruction-sftを用いることで、
     CLI上でAIとチャットを出来るようにしたプログラムです。
