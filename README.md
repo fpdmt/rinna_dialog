@@ -9,7 +9,7 @@
 
   
 ## [テスト環境]
-    cuda vram使用率推移
+   # cuda vram使用率推移
         - RTX4090, vram24GB, max_length=256設定
             アイドル時 : 2.4 GB
             実行時 : 17.6 GB
@@ -30,7 +30,7 @@
             レスポンスタイム : 2 ~ 5秒 (体感)
             備考 : SATA SSDで実行。実行時の読み込みに60秒くらい掛かる模様
             
-    cpu RAM使用率推移
+   # cpu RAM使用率推移
         - 5950x, RAM64GB, max_length=256設定
             アイドル時 : 8.0 GB
             実行時 : 28.3 GB(ピーク) ～ 21.6 GB(安定)
@@ -38,17 +38,17 @@
             レスポンスタイム : 10 ~ 13秒 (体感)
             
             
-### [Requirements]          
+## [Requirements]          
 ```
-        - cuda 11.7
-        - python == 3.10.6
-        - torch == 1.13.1+cu117
-        - transformers == 4.29.2
+- cuda 11.7
+- python == 3.10.6
+- torch == 1.13.1+cu117
+- transformers == 4.29.2
 ```
     
 ## [Get Start!]
 
-    1. 初回起動
+    # 1. 初回起動
     
     * [仮想環境: Python環境構築ガイド]([https://firmware-selector.openwrt.org/](https://www.python.jp/install/windows/venv.html))
 
@@ -65,15 +65,15 @@
     起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされます。
    
 
-    2. 次回以降の起動手順
+    # 2. 次回以降の起動手順
          `cd C:\{dialog.pyを保存したフォルダ}`
          
-         `.\{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat
+         `.{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat`
          
-         `py``thon dialog_v3.py`
+         `py thon dialog_v3.py`
 
    ### Tips
-     ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog_v3.pyだけで動きます、ただし環境も混ざるので一長一短。
+     ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog_v3.pyだけで動きます。ただし環境も混ざるので一長一短。
      ・バッチファイルとかで自動化すると便利。
 
 
