@@ -7,7 +7,9 @@
     
    * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
   
-  ![dialog_v3 2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/196b5b26-61e2-450c-8f03-d041e3814543)
+![dialog_v3 2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/27207c3c-0bef-4d7d-adb4-450fc41ca890)
+
+
 
 ## [テスト環境]
      ### cuda vram使用率推移
@@ -107,6 +109,6 @@
 
         ・最後にtxtファイルをゴミ箱へいれて完了
 
-    <完成例>
-   ![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/a4b3d511-2c97-4888-aa7a-280ed30415cd)
+![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/2dfa69e9-5cc8-4172-86b0-543a1d2de697)
+
 
