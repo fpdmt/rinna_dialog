@@ -7,7 +7,8 @@
     
    * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
   
-  
+  ![dialog_v3 2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/196b5b26-61e2-450c-8f03-d041e3814543)
+
 ## [テスト環境]
      ### cuda vram使用率推移
         - RTX4090, vram24GB, max_length=256設定
@@ -97,7 +98,7 @@
     A : ブラウザでダウンロードした`pytorch_model.bin`をキャッシュの形式にして読み込ませることができます。
 
 
-        ・ダウンロードして解凍のち移動
+        ・”models--rinna--japanese-gpt-neox-3.6b-instruction-sft.zip”ダウンロードして解凍のち移動
         「models--rinna--japanese-gpt-neox-3.6b-instruction-sft」を以下のフォルダの中に移動
             -> C:\Users\{users}\.cache\huggingface\hub
 
@@ -109,4 +110,5 @@
         ・最後にtxtファイルをゴミ箱へいれて完了
 
         <完成例>
-        https://i.imgur.com/4Crp8qG.png
+        ![4Crp8qG](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/196673e6-d4ca-480c-8ae6-299620fc71dc)
+
