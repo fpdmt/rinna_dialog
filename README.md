@@ -110,5 +110,5 @@
         ・最後にtxtファイルをゴミ箱へいれて完了
 
         <完成例>
-        ![4Crp8qG](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/196673e6-d4ca-480c-8ae6-299620fc71dc)
+![4Crp8qG](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/196673e6-d4ca-480c-8ae6-299620fc71dc)
 
