@@ -1,7 +1,6 @@
 ### rinna_dialog
 
-
-##[概要]
+## [概要]
     rinna/japanese-gpt-neox-3.6b-instruction-sft
     https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft
 
@@ -9,8 +8,8 @@
     CLI上でAIとチャットを出来るようにしたプログラムです。
 
   
-##[テスト環境]
-    cuda vram使用率推移
+## [テスト環境]
+    # cuda vram使用率推移
         - RTX4090, vram24GB, max_length=256設定
             アイドル時 : 2.4 GB
             実行時 : 17.6 GB
@@ -31,21 +30,21 @@
             レスポンスタイム : 2 ~ 5秒 (体感)
             備考 : SATA SSDで実行。実行時の読み込みに60秒くらい掛かる模様
             
-    cpu RAM使用率推移
+    # cpu RAM使用率推移
         - 5950x, RAM64GB, max_length=256設定
             アイドル時 : 8.0 GB
             実行時 : 28.3 GB(ピーク) ～ 21.6 GB(安定)
             5発話でmax_lengthがフロー : 21.7 GB
             レスポンスタイム : 10 ~ 13秒 (体感)
             
-    パッケージのversion
+    # パッケージのversion
         - cuda 11.7
         - python == 3.10.6
         - torch == 1.13.1+cu117
         - transformers == 4.29.2
   
     
-##[環境構築メモ]
+## [環境構築メモ]
     パッケージのverを纏めたrequirements.txt
    https://ux.getuploader.com/dialogues_txt/download/1198
     パスはrinna
@@ -65,7 +64,7 @@
     起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされる
    
 
-##[次回以降起動手順]
+## [次回以降起動手順]
    > cd C:\{dialog_v3を保存したフォルダ}
    > .\{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat
    > python dialog_v3.py
@@ -75,11 +74,11 @@
      ・バッチファイルとかで自動化すると便利
 
 
-##[小ネタ]
+## [小ネタ]
     ボイロなどを持っている人は「AssistantSeika」のSeikaSay2をsubprocesで使うとAIの返答を喋らせることができちゃうゾ
     まだ試してないけどvoicevoxなどのAPIでもワンチャン
 
-##[Q&A]
+## [Q&A]
     Q : なんかエラーが出た！
     A : 環境構築メモで再構築してみましょう。それでも動かないときはLLM部まで
 
