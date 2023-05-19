@@ -49,7 +49,7 @@
 
     # 1. 初回起動
     
-    * [仮想環境: Python環境構築ガイド]([https://firmware-selector.openwrt.org/](https://www.python.jp/install/windows/venv.html))
+    * [仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
 
     `py -3.10 -m venv LLM_venv`
     
