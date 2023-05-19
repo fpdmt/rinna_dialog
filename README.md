@@ -1,30 +1,15 @@
-# rinna_dialog
+### rinna_dialog
 
 
-[概要]
+##[概要]
     rinna/japanese-gpt-neox-3.6b-instruction-sft
     https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft
 
     対話型にファインチューニングされたrinna3.6B-instruction-sftを用いることで、
     CLI上でAIとチャットを出来るようにしたプログラムです。
 
-
-[修正履歴]
-  ・ モデルの保存先を表示
-  ・ 設定項目を追加
-  ・ float16モードを実装、vram10GBでの動作確認。
-  ・ temperatureが宙に浮いてた!（token_temperatureの値が代入されてなかった）
-
-
-
-[作業予定]
-  ・ 環境構築メモの見直し
-  ・ モデルの保存先を参照できるようにする
-  ・ タグを[reset]から[clear]に変更
-  ・ 短期記憶の古い順から削除
-
   
-[テスト環境]
+##[テスト環境]
     cuda vram使用率推移
         - RTX4090, vram24GB, max_length=256設定
             アイドル時 : 2.4 GB
@@ -60,7 +45,7 @@
         - transformers == 4.29.2
   
     
-[環境構築メモ]
+##[環境構築メモ]
     パッケージのverを纏めたrequirements.txt
    https://ux.getuploader.com/dialogues_txt/download/1198
     パスはrinna
@@ -80,7 +65,7 @@
     起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされる
    
 
-[次回以降起動手順]
+##[次回以降起動手順]
    > cd C:\{dialog_v3を保存したフォルダ}
    > .\{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat
    > python dialog_v3.py
@@ -90,11 +75,11 @@
      ・バッチファイルとかで自動化すると便利
 
 
-[小ネタ]
+##[小ネタ]
     ボイロなどを持っている人は「AssistantSeika」のSeikaSay2をsubprocesで使うとAIの返答を喋らせることができちゃうゾ
     まだ試してないけどvoicevoxなどのAPIでもワンチャン
 
-[Q&A]
+##[Q&A]
     Q : なんかエラーが出た！
     A : 環境構築メモで再構築してみましょう。それでも動かないときはLLM部まで
 
