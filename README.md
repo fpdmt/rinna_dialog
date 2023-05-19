@@ -1,6 +1,6 @@
-## rinna_dialog
+# ***rinna_dialog***
 
-# [概要]
+## [概要]
     rinna/japanese-gpt-neox-3.6b-instruction-sft
     https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft
 
@@ -8,7 +8,7 @@
     CLI上でAIとチャットを出来るようにしたプログラムです。
 
   
-# [テスト環境]
+## [テスト環境]
     cuda vram使用率推移
         - RTX4090, vram24GB, max_length=256設定
             アイドル時 : 2.4 GB
@@ -37,48 +37,52 @@
             5発話でmax_lengthがフロー : 21.7 GB
             レスポンスタイム : 10 ~ 13秒 (体感)
             
-    パッケージのversion
+            
+### [Requirements]          
+```
         - cuda 11.7
         - python == 3.10.6
         - torch == 1.13.1+cu117
         - transformers == 4.29.2
-  
+```
     
-# [環境構築メモ]
-    パッケージのverを纏めたrequirements.txt
-   https://ux.getuploader.com/dialogues_txt/download/1198
-    パスはrinna
+## [Get Start!]
 
-    > cd C:¥{dialog.pyを保存したフォルダ}
+    1. 初回起動
     
-    > py -3.10 -m venv LLM_venv (ここでは仮に環境名LLM_venvを作成)
+    * [仮想環境: Python環境構築ガイド]([https://firmware-selector.openwrt.org/](https://www.python.jp/install/windows/venv.html))
+
+    `py -3.10 -m venv LLM_venv`
     
-    > .LLM_venv\Scripts\Activate.bat
+    `.LLM_venv\Scripts\Activate.bat`
 
-    > pip install -r requirements.txt
+    `pip install -r requirements.txt`
 
-    > pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+    `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117'
  
-    > python dialog_v4.py
+    'python dialog.py'
 
-    起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされる
+    起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされます。
    
 
-# [次回以降起動手順]
-   > cd C:\{dialog_v3を保存したフォルダ}
-   > .\{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat
-   > python dialog_v3.py
+    2. 次回以降の起動手順
+         `cd C:\{dialog.pyを保存したフォルダ}`
+         
+         `.\{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat
+         
+         `py``thon dialog_v3.py`
 
-   Tips
-     ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog_v3.pyだけで動く、ただし環境も混ざるので一長一短
-     ・バッチファイルとかで自動化すると便利
+   ### Tips
+     ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog_v3.pyだけで動きます、ただし環境も混ざるので一長一短。
+     ・バッチファイルとかで自動化すると便利。
 
 
-# [小ネタ]
+## [小ネタ]
     ボイロなどを持っている人は「AssistantSeika」のSeikaSay2をsubprocesで使うとAIの返答を喋らせることができちゃうゾ
     まだ試してないけどvoicevoxなどのAPIでもワンチャン
 
-# [Q&A]
+
+## [Q&A]
     Q : なんかエラーが出た！
     A : 環境構築メモで再構築してみましょう。それでも動かないときはLLM部まで
 
