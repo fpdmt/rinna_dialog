@@ -7,7 +7,8 @@
     
    * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
   
-![dialog_v3 2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/27207c3c-0bef-4d7d-adb4-450fc41ca890)
+![a2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7d34f584-2184-489e-9dcf-6594c72a50b0)
+
 
 
 
