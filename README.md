@@ -49,7 +49,7 @@
     
 ## [Get Start!]
 
-    # 1. 初回起動
+    # 初回起動
     
     *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
 
@@ -66,7 +66,7 @@
     起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされます。
    
 
-    # 2. 次回以降の起動手順
+    # 次回以降の起動手順
          `cd C:\{dialog.pyを保存したフォルダ}`
          
          `.{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat`
@@ -87,17 +87,14 @@
     Q : なんかエラーが出た！
     A : 環境構築メモで再構築してみましょう。それでも動かないときはLLM部まで
 
-    Q : f16モード有効にすると、`t = torch.tensor([], （略）`と出て固まるぞ！
+    Q : f16モード有効にすると、`t = torch.tensor([], （略）`と出て固まる！
     A : 圧縮に時間が掛かっているようです。
         タスクマネージャーを開いてRAMが使われていくのを眺めて気長に待ちましょう。
         読み込みが終わってるのに動かない場合はEnterキーを押すと強制的に進めます。
 
-    Q : なんかエラーでモデルのダウンロードが途中で止まってしまうんやが
+    Q : なんかエラーでモデルのダウンロードが途中で止まってしまう！
     A : ブラウザでダウンロードした`pytorch_model.bin`をキャッシュの形式にして読み込ませることができます。
 
-        3.6b-instruction-sftの「モデル抜き.zip」
-        https://ux.getuploader.com/halero/download/78
-        パスはrinna
 
         ・ダウンロードして解凍のち移動
         「models--rinna--japanese-gpt-neox-3.6b-instruction-sft」を以下のフォルダの中に移動
