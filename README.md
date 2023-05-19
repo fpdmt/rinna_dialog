@@ -56,9 +56,9 @@
     
     *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
 
-    `py -3.10 -m venv LLM_venv`
+    `py -3.10 -m venv LLM_venv` (ここでは仮に環境名LLM_venvを作成)
     
-    `.LLM_venv\Scripts\Activate.bat`
+    `.\LLM_venv\Scripts\Activate.bat`
 
     `pip install -r requirements.txt`
 
@@ -72,7 +72,7 @@
     # 次回以降の起動手順
          `cd C:\{dialog.pyを保存したフォルダ}`
          
-         `.{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat`
+         `.\{初回起動時に作成したvenvフォルダ}LLM_venv\Scripts\Activate.bat`
          
          `py thon dialog_v3.py`
 
