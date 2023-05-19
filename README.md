@@ -54,7 +54,7 @@
 
     # 初回起動
     
-    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
+   *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
 
     `py -3.10 -m venv LLM_venv` (ここでは仮に環境名LLM_venvを作成)
     
