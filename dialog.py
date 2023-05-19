@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-dialog_v3
+dialog_v3.1
 
 [概要]
     rinna/japanese-gpt-neox-3.6b-instruction-sft
@@ -14,7 +14,7 @@ dialog_v3
 [修正履歴]
   ・ 出力される文書から"</s>"を削除 
   ・ [break]と[reset]を実装
-  ・ AutoTokenizer -> T5Tokenizerに変更。(どちらでも動く模様、お好みで変更)
+  ・ T5Tokenizer -> AutoTokenizerに変更。(どちらでも動く模様、お好みで変更)
   ・ モデルの保存先を表示
   ・ 設定項目を追加
   ・ float16モードを実装、vram10GBでの動作確認。
@@ -57,28 +57,33 @@ dialog_v3
   
     
 [環境構築メモ]
-    パッケージのverを纏めたrequirements.txtをダウンロード
 
-    > cd C:¥{dialog.pyを保存したフォルダ}
+    <参考: 仮想環境: Python環境構築ガイド>
+        https://www.python.jp/install/windows/venv.html
+
+    ・コマンドプロンプトを管理者権限で実行
+    ・パッケージのverを纏めたrequirements.txtを用意
+
+    > cd C:\\{dialog.pyを保存したフォルダ}
     
     > py -3.10 -m venv LLM_venv (ここでは仮に環境名LLM_venvを作成)
     
-    > .\LLM_venv\Scripts\Activate.bat
+    > .\\LLM_venv\\Scripts\\activate.bat
 
     > pip install -r requirements.txt
 
     > pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
  
-    > python dialog_v2.py
+    > python dialog.py
 
     起動するとHuggingFaceから自動でモデルがダウンロードされキャッシュされる
-    モデルを自前でダウンロードした場合は事前学習済みモデルの読み込みでモデルフォルダのfullパスを指定
-   
+    モデルを自前でダウンロードした場合は、QAの手順でキャッシュ化が必要
+
 
 [次回以降起動手順]
-   > cd C:\{dialog_v3を保存したフォルダ}
-   > .\{初回起動時に作成したvenvフォルダ}\Scripts\activate.bat
-   > python dialog_v3.py
+   > cd C:\\{dialog_v3を保存したフォルダ}
+   > .\\{初回起動時に作成したvenvフォルダ}\\Scripts\\activate.bat
+   > python dialog.py
 
    Tips
      ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog_v3.pyだけで動く、ただし環境も混ざるので一長一短
@@ -98,27 +103,24 @@ dialog_v3
         タスクマネージャーを開いてRAMが使われていくのを眺めて気長に待ちましょう。
         読み込みが終わってるのに動かない場合はEnterキーを押すと強制的に進めます。
 
-    Q : モデルのダウンロードが途中で止まってしまうんやが・・・
+    Q : なんかエラーでモデルのダウンロードが途中で止まってしまうんやが・・・
     A : ブラウザでダウンロードした「pytorch_model.bin」をキャッシュの形式にして読み込ませることができます。
-
-        3.6b-instruction-sftの「モデル抜き.zip」
-        https://github.com/AlgosErgo/rinna_dialog/blob/main/models--rinna--japanese-gpt-neox-3.6b-instruction-sft.zip
-
-        ・ダウンロードして解凍のち移動
-        「models--rinna--japanese-gpt-neox-3.6b-instruction-sft」を以下のフォルダの中に移動
-            -> C:\Users\{users}\.cache\huggingface\hub
-
-        ・中身を開いて以下のtxtを探す
-          models--rinna--japanese-gpt-neox-3.6b-instruction-sft\blobs\0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b.txt
-
-        ・pytorch_model.binを「0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b」にリネーム
-
-        ・最後にtxtファイルをゴミ箱へいれて完了
-
-        <完成例>
-        https://i.imgur.com/4Crp8qG.png
-
 '''
+#       ・「モデル抜き.zip」をダウンロードして解凍のち以下へ移動
+#         -> C:\Users\{users}\.cache\huggingface\hub
+#
+#       ・ 中身を開いて以下のtxtを探す
+#          models--rinna--japanese-gpt-neox-3.6b-instruction-sft\blobs\0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b.txt
+#
+#       ・ pytorch_model.binを「0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b」にリネーム
+#
+#       ・ 最後にtxtファイルをゴミ箱へいれて完了
+#
+#       <完成例>
+#        https://i.imgur.com/4Crp8qG.png
+
+
+
 
 ################
 ### 設定項目 ###
@@ -130,7 +132,7 @@ dialog_v3
 model_name = "rinna/japanese-gpt-neox-3.6b-instruction-sft"
 
 # モデルの移動先
-# "cuda"か"cpu"を指定
+# "cuda" or "cpu"
 #
 processor = "cuda"
 
@@ -143,7 +145,7 @@ f16_mode = True
 # max_lengthを増やすと会話が長続きする
 # ただしvramと要相談
 #
-token_max_lengh = 256
+token_max_lengh = 1024
 
 
 # temperatureが低いほど一貫性がある出力を、
@@ -179,25 +181,25 @@ conversation_list = [
 ###################################################################################
 
 import torch
-from transformers import T5Tokenizer, AutoModelForCausalLM, file_utils
+from transformers import T5Tokenizer, AutoTokenizer, AutoModelForCausalLM, file_utils
 
 
 ### 事前学習済みモデルの読み込み
 if (f16_mode == True):
     model = AutoModelForCausalLM.from_pretrained(
-        model_name, torch_dtype=torch.float16
-    )
+                 model_name, torch_dtype=torch.float16
+             )
 
 else:
     model = AutoModelForCausalLM.from_pretrained(
-        model_name
-    )
+                model_name
+             )
 
 
 ### トークナイザの読み込み
-tokenizer = T5Tokenizer.from_pretrained(
-    model_name, use_fast=False
-)
+tokenizer = AutoTokenizer.from_pretrained(
+                model_name, use_fast=False
+             )
 
 
 ### CUDAの検出
@@ -259,7 +261,7 @@ def check_options():
     print("")
     print("")
 
-    print("--- dialog_v3 ---")
+    print("--- dialog_v3.1 ---")
     print("")
     print("＜オプション＞ （'[]'も入力)")
     print("[break] : 終了")
@@ -269,7 +271,8 @@ def check_options():
     # デフォルト C:\Users\{ユーザー名}\.cache\huggingface\hub
     print("")
     print("＜モデルの保存先＞")
-    print(file_utils.default_cache_path)
+    print("C:\\Users\\ユーザー名\\.cache\\huggingface\\hub")
+    #print(file_utils.default_cache_path)
     
     ### 事前に入力した会話履歴の表示
     print("")
