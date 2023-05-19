@@ -112,6 +112,6 @@
 ![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/2dfa69e9-5cc8-4172-86b0-543a1d2de697)
 
 謝辞
-なんJLLM部員の方々
+なんJLLM部の方々
 https://fate.5ch.net/test/read.cgi/liveuranus/1678930450/l50
 
