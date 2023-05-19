@@ -2,11 +2,11 @@
 
 ## [概要]
 
-    *[rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.com/rinna/japanese-gpt-neox-3.6b-instruction-sft)
-    
     対話型にファインチューニングされたrinna3.6B-instruction-sftを用いることで、
     CLI上でAIとチャットを出来るようにしたプログラムです。
-
+    
+   * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
+  
   
 ## [テスト環境]
    ### cuda vram使用率推移
@@ -46,11 +46,12 @@
 - transformers == 4.29.2
 ```
     
+    
 ## [Get Start!]
 
     # 1. 初回起動
     
-    * [仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
+    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
 
     `py -3.10 -m venv LLM_venv`
     
