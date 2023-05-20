@@ -111,7 +111,7 @@
 ![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/2dfa69e9-5cc8-4172-86b0-543a1d2de697)
 
     
-## 音声合成ソフトとの連携方法
+## [音声合成ソフトとの連携方法]
 
 ### AssistantSeika - SeikaSay2.exeを使用した方法
 
@@ -120,7 +120,7 @@
 - voiceroid, voiceroid2, A.I.VOICE, 棒読みちゃん, softalkなどの音声合成ソフト
 - AssistantSeika
 - 同梱の.\SeikaSay2\SeikaSay2.exe
-- .net framework 3.5以上、その他ランタイムなど動かないときは適宜インスコ
+- .net framework 3.5以上。
 
 #### 実装手順
 
@@ -137,7 +137,20 @@ import subprocess
 #
 subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 
+#### 使用方法
 
+1, AssistantSeikaSetup.msiを実行してインストール。
+
+2, Voiceroidなどの音声合成ソフトを起動して、最小化はしない。
+
+3, AssistantSeikaを実行し、実行している音声合成ソフトの名前にチェックを入れて「製品スキャン」を実行。
+
+4, スキャンが完了すると自動的にタブが切り替わる。
+   
+5,「HTTP機能設定」のタブを開き「HTTP機能を利用する」にチェック。
+   
+6, 特に変更はせずに右下の「起動する」をクリック、これでlocalhost内で待ち受け状態へ移行。
+   サーバを立てたい場合は待ち受けアドレスとポートを変更して、ファイアウォールの受信と送信にAssistantseikaのポートを指定。
 
 
 
