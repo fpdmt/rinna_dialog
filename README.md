@@ -51,7 +51,7 @@
 ```
     
     
-## [Get Start!]
+## [Get Started!]
 
    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
    
