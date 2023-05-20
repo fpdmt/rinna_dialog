@@ -59,7 +59,7 @@
 
         `py -3.10 -m venv LLM_venv` (ここでは仮に環境名LLM_venvを作成)
     
-         `.\LLM_venv\Scripts\Activate.bat`
+         `.\LLM_venv\Scripts\activate.bat`
 
          `pip install -r requirements.txt`
 
