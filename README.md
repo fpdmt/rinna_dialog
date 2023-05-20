@@ -117,5 +117,5 @@
 
 謝辞
 なんJLLM部の方々
-https://fate.5ch.net/test/read.cgi/liveuranus/1678930450/l50
+/liveuranus/1678930450/l50
 
