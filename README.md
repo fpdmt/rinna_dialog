@@ -85,18 +85,13 @@
      ・バッチファイルとかで自動化すると便利。
 
 
-## [小ネタ]
-    ボイロなどの音声合成ソフトを持っている人は「AssistantSeika」のSeikaSay2をsubprocesで使うとAIの返答を喋らせることができちゃうゾ
-    まだ試してないけどvoicevoxなどのAPIでもワンチャン
-
-
 ## [Q&A]
 
     Q : なんかエラーが出た！
-    A : 環境構築メモで再構築してみましょう。それでも動かないときはLLM部まで
+    A : 環境構築メモで再構築してみましょう。
 
     Q : f16モード有効にすると、`t = torch.tensor([], （略）`と出て固まる！
-    A : 圧縮に時間が掛かっているようです。
+    A : cudaを使用している場合でもモデルは一度RAMへ読み込まれてからVRAMに展開されます。
         タスクマネージャーを開いてRAMが使われていくのを眺めて気長に待ちましょう。
         読み込みが終わってるのに動かない場合はEnterキーを押すと強制的に先へ進めます。
 
@@ -114,6 +109,41 @@
         ・最後にtxtファイルをゴミ箱へいれて完了
 
 ![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/2dfa69e9-5cc8-4172-86b0-543a1d2de697)
+
+    
+## 音声合成ソフトとの連携方法
+
+### AssistantSeika - SeikaSay2.exeを使用した方法
+
+#### 必要な物
+
+- voiceroid, voiceroid2, A.I.VOICE, 棒読みちゃん, softalkなどの音声合成ソフト
+- AssistantSeika
+- 同梱の.\SeikaSay2\SeikaSay2.exe
+- .net framework 3.5以上、その他ランタイムなど動かないときは適宜インスコ
+
+#### 実装手順
+
+1. コード側に以下を二行を追記
+
+```python
+import subprocess
+
+#対話ループ内の「### AIの返答」を探して、responseに代入し終わったあたりで、subprocessでSeikaSay2.exeに投げる。
+#response = ai_response(conversation_history)
+
+#この例だと、A.I.VOICE 紲星あかり
+# cidで話者を指定
+#
+subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
+
+
+
+
+
+
+
+
 
 謝辞
 なんJLLM部の方々
