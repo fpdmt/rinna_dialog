@@ -135,6 +135,7 @@ import subprocess
 # cidで話者を指定
 #
 subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
+```
 
 #### 使用方法
 
@@ -149,7 +150,7 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 5,「HTTP機能設定」のタブを開き「HTTP機能を利用する」にチェック。
    
 6, 特に変更はせずに右下の「起動する」をクリック、これでlocalhost内で待ち受け状態へ移行。
-   サーバを立てたい場合は待ち受けアドレスとポートを変更して、ファイアウォールの受信と送信にAssistantseikaのポートを指定。
+   サーバを立てたい場合は待ち受けアドレスとポートを変更して、ファイアウォール設定で受信と送信にAssistantseikaのポートを指定して許可。
 
 
 
