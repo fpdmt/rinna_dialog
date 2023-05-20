@@ -118,7 +118,7 @@ CLI上でAIとチャットを出来るようにしたプログラムです。
 #### 必要な物
 
 - voiceroid, voiceroid2, A.I.VOICE, 棒読みちゃん, softalkなどの音声合成ソフト
--  * [AssistantSeika](https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
+- [AssistantSeika](https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
 - 同梱の.\SeikaSay2\SeikaSay2.exe
 
 #### 実装手順
@@ -159,7 +159,9 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 
 
 謝辞
+
 AssistantSeika製作者様
+
 なんJLLM部の方々
 /liveuranus/1678930450/l50
 
