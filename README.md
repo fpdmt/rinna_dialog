@@ -158,7 +158,7 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 
 
 
-謝辞
+## [謝辞]
 
 AssistantSeika製作者様
 
