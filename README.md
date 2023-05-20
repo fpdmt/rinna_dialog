@@ -87,32 +87,6 @@
      ・バッチファイルとかで自動化すると便利。
 
 
-## [Q&A]
-
-    Q : なんかエラーが出た！
-    A : [Get Started!]を参考に再構築してみましょう。
-
-    Q : 実行すると、`t = torch.tensor([], （略）`と出て固まる！
-    A : cudaを使用している場合でもモデルは一度RAMへ読み込まれてからVRAMに展開されます。
-        タスクマネージャーを開いてRAMが使われていくのを眺めて気長に待ちましょう。
-        読み込みが終わっているのに動かない場合はEnterキーを押すと強制的に先へ進めます。
-
-    Q : モデルのダウンロードが途中で止まってしまう！
-    A : ブラウザでダウンロードした`pytorch_model.bin`をキャッシュの形式にして読み込ませることができます。
-
-        ・”models--rinna--japanese-gpt-neox-3.6b-instruction-sft.zip”をダウンロードして解凍のち以下のフォルダに移動。
-            -> C:\Users\{users}\.cache\huggingface\hub
-
-        ・中身を開いて以下のtxtを探す。
-          models--rinna--japanese-gpt-neox-3.6b-instruction-sft\blobs\0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b.txt
-
-        ・`pytorch_model.bin`を「0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b」にリネーム。
-
-        ・最後にtxtファイルをゴミ箱へいれて完了。
-
-![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/2dfa69e9-5cc8-4172-86b0-543a1d2de697)
-
-    
 ## [音声合成ソフトとの連携方法]
 
 ### AssistantSeika - SeikaSay2.exeを使用した方法
@@ -157,8 +131,35 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 
 ### WindowsでVOICEVOXだけ使う場合
 
+k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)を使用できます。
+同様にsubprocessから渡すことができます。
 
 
+
+## [Q&A]
+
+    Q : なんかエラーが出た！
+    A : [Get Started!]を参考に再構築してみましょう。
+
+    Q : 実行すると、`t = torch.tensor([], （略）`と出て固まる！
+    A : cudaを使用している場合でもモデルは一度RAMへ読み込まれてからVRAMに展開されます。
+        タスクマネージャーを開いてRAMが使われていくのを眺めて気長に待ちましょう。
+        読み込みが終わっているのに動かない場合はEnterキーを押すと強制的に先へ進めます。
+
+    Q : モデルのダウンロードが途中で止まってしまう！
+    A : ブラウザでダウンロードした`pytorch_model.bin`をキャッシュの形式にして読み込ませることができます。
+
+        ・”models--rinna--japanese-gpt-neox-3.6b-instruction-sft.zip”をダウンロードして解凍のち以下のフォルダに移動。
+            -> C:\Users\{users}\.cache\huggingface\hub
+
+        ・中身を開いて以下のtxtを探す。
+          models--rinna--japanese-gpt-neox-3.6b-instruction-sft\blobs\0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b.txt
+
+        ・`pytorch_model.bin`を「0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b」にリネーム。
+
+        ・最後にtxtファイルをゴミ箱へいれて完了。
+
+![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/2dfa69e9-5cc8-4172-86b0-543a1d2de697)
 
 
 ## [謝辞]
