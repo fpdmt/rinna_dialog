@@ -71,11 +71,11 @@
    
    
    ### 次回以降の起動手順
-         `cd C:\{dialog.pyを保存したフォルダ}`
+         `cd C:\\{dialog.pyを保存したフォルダ}`
          
-         `.\{初回起動時に作成したvenvフォルダ}LLM_venv\Scripts\Activate.bat`
+         `.\\{初回起動時に作成したvenvフォルダ}\\Scripts\\activate.bat`
          
-         `py thon dialog_v3.py`
+         `python dialog.py`
 
    ### Tips
      ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog_v3.pyだけで動きます。ただし環境も混ざるので一長一短。
@@ -83,7 +83,7 @@
 
 
 ## [小ネタ]
-    ボイロなどを持っている人は「AssistantSeika」のSeikaSay2をsubprocesで使うとAIの返答を喋らせることができちゃうゾ
+    ボイロなどの音声合成ソフトを持っている人は「AssistantSeika」のSeikaSay2をsubprocesで使うとAIの返答を喋らせることができちゃうゾ
     まだ試してないけどvoicevoxなどのAPIでもワンチャン
 
 
