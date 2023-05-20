@@ -56,18 +56,23 @@
    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
    
    ### 初回起動
-
-        `cd C:\\{dialog.pyを保存したフォルダ}`
+```
+D:\>git clone https://github.com/AlgosErgo/rinna_dialog
         
-        `py -3.10 -m venv LLM_venv` (ここでは仮に環境名LLM_venvを作成)
-    
-         `.\LLM_venv\Scripts\activate.bat`
+D:\>cd rinna_dialog
 
-         `pip install -r requirements.txt`
+D:\rinna_dialog>py -3.10 -m venv rinna_venv
 
-         `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117'
+D:\rinna_dialog>.\rinna_venv\Scripts\activate.bat
+
+(rinna_venv) D:\rinna_dialog>pip install -r requirements.txt
+
+(rinna_venv) D:\rinna_dialog>python.exe -m pip install --upgrade pip
+
+(rinna_venv) D:\rinna_dialog>pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
  
-         'python dialog.py'
+(rinna_venv) D:\rinna_dialog>python dialog.py
+```
 
    ### Tips
       ・起動するとHuggingFaceから自動でモデルがダウンロードされ以下のディレクトリへキャッシュされる。
