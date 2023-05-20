@@ -79,7 +79,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
    - dialog.py内の設定項目`F16_mode`より変更可。
 - 起動するとHuggingFaceから自動でモデルがダウンロードされ以下のディレクトリへキャッシュされます。
    - `C:\\Users\\{ユーザー名}\\.cache\\huggingface\\hub`
-- モデルを自前でダウンロードした場合は、後述の[Q&A]の手順でキャッシュ化が必要です。
+- モデルを手動でダウンロードした場合は、後述の[Q&A]の手順でキャッシュ化が必要です。
    
    
 ### 次回以降の起動手順
