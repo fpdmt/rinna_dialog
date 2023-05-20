@@ -55,7 +55,7 @@
 
    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
    
-   ### 初回起動
+### 初回起動
 ```
 D:\>git clone https://github.com/AlgosErgo/rinna_dialog
         
