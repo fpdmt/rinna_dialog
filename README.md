@@ -75,7 +75,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 ```
 
    ### Tips
-- VRAM削減のためデフォルトでFloat16での読み込みとなっています、その影響で<sub>起動には約30秒以上</sub>かかることが予想されます。
+- VRAM削減のためデフォルトでFloat16での読み込みとなっています。その影響で**起動には約30秒以上**かかることが予想されます。
    - dialog.py内の設定項目`F16_mode`より変更可。
 - 起動するとHuggingFaceから自動でモデルがダウンロードされ以下のディレクトリへキャッシュされます。
    - `C:\\Users\\{ユーザー名}\\.cache\\huggingface\\hub`
