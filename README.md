@@ -93,6 +93,7 @@
 
 #### 必要な物
 
+- Windows OS環境
 - voiceroid, voiceroid2, A.I.VOICE, 棒読みちゃん, softalkなどの音声合成ソフト
 - [AssistantSeika](https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
 - 同梱の.\SeikaSay2\SeikaSay2.exe
@@ -132,7 +133,7 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 ### WindowsでVOICEVOXだけ使う場合
 
 k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)を使用できます。
-同様にsubprocessから渡すことができます。
+同様にsubprocessから渡します。
 
 
 
