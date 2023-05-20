@@ -75,21 +75,24 @@ D:\rinna_dialog>.\rinna_venv\Scripts\activate.bat
 ```
 
    ### Tips
-      ・起動するとHuggingFaceから自動でモデルがダウンロードされ以下のディレクトリへキャッシュされる。
+・VRAM削減のためデフォルトでFloat16での読み込みとなっています。その影響で起動には約30秒以上かかることが予想されます。
+・起動するとHuggingFaceから自動でモデルがダウンロードされ以下のディレクトリへキャッシュされます。
           - `C:\\Users\\{ユーザー名}\\.cache\\huggingface\\hub`
-      ・モデルを自前でダウンロードした場合は、後述の[Q&A]の手順でキャッシュ化が必要
+・モデルを自前でダウンロードした場合は、後述の[Q&A]の手順でキャッシュ化が必要です。
    
    
    ### 次回以降の起動手順
-         `cd C:\\{dialog.pyを保存したフォルダ}`
+```
+D:\>cd rinna_dialog
          
-         `.\\{初回起動時に作成したvenvフォルダ}\\Scripts\\activate.bat`
+D:\rinna_dialog>.\rinna_venv\Scripts\activate.bat
          
-         `python dialog.py`
+(rinna_venv) D:\rinna_dialog>python dialog.py
+```
 
    ### Tips
-     ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
-     ・バッチファイルとかで自動化すると便利。
+・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
+・バッチファイルとかで自動化すると便利。
 
 
 ## [音声合成ソフトとの連携方法]
