@@ -78,7 +78,7 @@
          `python dialog.py`
 
    ### Tips
-     ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog_v3.pyだけで動きます。ただし環境も混ざるので一長一短。
+     ・venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
      ・バッチファイルとかで自動化すると便利。
 
 
