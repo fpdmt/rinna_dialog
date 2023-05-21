@@ -106,7 +106,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 
 ## [音声合成ソフトとの連携方法]
 
-1,### AssistantSeika - SeikaSay2.exeを使用した方法
+### 1. AssistantSeika - SeikaSay2.exeを使用した方法
 ![akari_2222](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/1eb6a4c2-aa62-4856-a43d-1b5becf18a69)
 
 #### 必要な物
@@ -143,7 +143,7 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 4, スキャンが完了すると自動的にタブが切り替わる。
 
 
-2, ### WindowsでVOICEVOXだけ使う場合
+### 2. WindowsでVOICEVOXだけ使う場合
 
 k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)を使用できます。
 同様にsubprocessから渡します。
