@@ -99,6 +99,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 ## [音声合成ソフトとの連携方法]
 
 ### AssistantSeika - SeikaSay2.exeを使用した方法
+![akari_2222](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/1eb6a4c2-aa62-4856-a43d-1b5becf18a69)
 
 #### 必要な物
 
