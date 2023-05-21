@@ -1,6 +1,5 @@
 # ***rinna_dialog***
 
-<br>
 
 ## [概要]
 
