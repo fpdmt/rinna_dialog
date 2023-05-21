@@ -1,6 +1,7 @@
 # ***rinna_dialog***
+
 <br>
-<br>
+
 ## [概要]
 
 対話型にファインチューニングされたrinna3.6B-instruction-sftを用いることで、
@@ -9,8 +10,10 @@
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
   
 ![a2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7d34f584-2184-489e-9dcf-6594c72a50b0)
+
 <br>
 <br>
+
 ## [テスト環境]
 
      ### 最小動作環境
@@ -49,6 +52,7 @@
             レスポンスタイム : 10 ~ 13秒 (体感)
 <br>
 <br>
+
 ## [Requirements]          
 ```
 - cuda 11.7
@@ -56,8 +60,10 @@
 - torch == 1.13.1+cu117
 - transformers == 4.29.2
 ```
+
 <br>
 <br>
+
 ## [Get Started!]
 
    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
@@ -104,6 +110,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 
 <br>
 <br>
+
 ## [音声合成ソフトとの連携方法]
 
 ### 1. AssistantSeika - SeikaSay2.exeを使用した方法
@@ -150,6 +157,7 @@ k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)
 
 <br>
 <br>
+
 ## [Q&A]
 
     Q : なんかエラーが出た！
