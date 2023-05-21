@@ -118,7 +118,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 
 #### 実装手順
 
-1. コード側に以下を二行を追記
+1. コード側に以下の2行を追記
 
 ```python
 import subprocess
