@@ -117,8 +117,8 @@ import subprocess
 #対話ループ内の「### AIの返答」を探して、responseに代入し終わったあたりで、subprocessでSeikaSay2.exeに投げる。
 #response = ai_response(conversation_history)
 
-#この例だと、A.I.VOICE 紲星あかり
-# cidで話者を指定
+# SeikaSay2.exeのpathを通していない場合はフルpathで記述、cidの引数で話者を指定。
+# 以下の例だと、A.I.VOICE 紲星あかり。
 #
 subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 ```
