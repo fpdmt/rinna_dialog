@@ -11,7 +11,6 @@
 ![a2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7d34f584-2184-489e-9dcf-6594c72a50b0)
 
 <br>
-<br>
 
 ## [テスト環境]
 
@@ -50,7 +49,7 @@
             5発話でmax_lengthがフロー : 21.7 GB
             レスポンスタイム : 10 ~ 13秒 (体感)
 <br>
-<br>
+
 
 ## [Requirements]          
 ```
@@ -59,8 +58,6 @@
 - torch == 1.13.1+cu117
 - transformers == 4.29.2
 ```
-
-<br>
 <br>
 
 ## [Get Started!]
@@ -92,8 +89,8 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 - 起動するとHuggingFaceから自動でモデルがダウンロードされ以下のディレクトリへキャッシュされます。
    - `C:\\Users\\{ユーザー名}\\.cache\\huggingface\\hub`
 - モデルを手動でダウンロードした場合は、後述の[Q&A]の手順でキャッシュ化が必要です。
-   
-   
+<br>
+
 ### 次回以降の起動手順
 ```
 D:\> cd rinna_dialog
@@ -107,7 +104,6 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 - venvを使用せずに、path通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
 - バッチファイルとかで自動化すると便利。
 
-<br>
 <br>
 
 ## [音声合成ソフトとの連携方法]
@@ -154,7 +150,6 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)を使用できます。
 同様にsubprocessから渡します。
 
-<br>
 <br>
 
 ## [Q&A]
