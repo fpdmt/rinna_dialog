@@ -142,8 +142,8 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 
 3, AssistantSeikaを実行し、実行している音声合成ソフトの名前にチェックを入れて「製品スキャン」を実行。
 
-4, スキャンが完了すると自動的にタブが切り替わる。
-
+4, スキャンが完了すると自動的にタブが切り替わり、待機状態へ。
+<br>
 
 ### 2. WindowsでVOICEVOXだけ使う場合
 
