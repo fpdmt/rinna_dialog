@@ -1,5 +1,6 @@
 # ***rinna_dialog***
-
+<br>
+<br>
 ## [概要]
 
 対話型にファインチューニングされたrinna3.6B-instruction-sftを用いることで、
@@ -8,10 +9,8 @@
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
   
 ![a2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7d34f584-2184-489e-9dcf-6594c72a50b0)
-
-
-
-
+<br>
+<br>
 ## [テスト環境]
 
      ### 最小動作環境
@@ -48,8 +47,8 @@
             実行時 : 28.3 GB(ピーク) ～ 21.6 GB(安定)
             5発話でmax_lengthがフロー : 21.7 GB
             レスポンスタイム : 10 ~ 13秒 (体感)
-            
-            
+<br>
+<br>
 ## [Requirements]          
 ```
 - cuda 11.7
@@ -57,8 +56,8 @@
 - torch == 1.13.1+cu117
 - transformers == 4.29.2
 ```
-    
-    
+<br>
+<br>
 ## [Get Started!]
 
    *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
@@ -103,7 +102,8 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 - venvを使用せずに、path通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
 - バッチファイルとかで自動化すると便利。
 
-
+<br>
+<br>
 ## [音声合成ソフトとの連携方法]
 
 ### 1. AssistantSeika - SeikaSay2.exeを使用した方法
@@ -148,8 +148,8 @@ subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
 k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)を使用できます。
 同様にsubprocessから渡します。
 
-
-
+<br>
+<br>
 ## [Q&A]
 
     Q : なんかエラーが出た！
