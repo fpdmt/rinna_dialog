@@ -100,7 +100,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 ```
 
    ### Tips
-- venvを使用せずにpath通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
+- venvを使用せずに、path通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
 - バッチファイルとかで自動化すると便利。
 
 
