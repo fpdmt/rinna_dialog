@@ -116,7 +116,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 - Windows OS環境
 - voiceroid, voiceroid2, A.I.VOICE, 棒読みちゃん, softalkなどの音声合成ソフト
 - [AssistantSeika](https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
-- 同梱の.\SeikaSay2\SeikaSay2.exe
+- AssistantSeikaに同梱の.\SeikaSay2\SeikaSay2.exe
 
 #### 実装手順
 
