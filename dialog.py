@@ -159,9 +159,6 @@ ai_name = "AI"
 conversation_list = [
     {"speaker": user_name, "text": "このプログラムはなんですか？"},
     {"speaker": ai_name, "text": "りんなを即席対話型にしたものです"},
-    {"speaker": user_name, "text": "プログラムのバグを直すコツを教えてください"},
-    {"speaker": ai_name, "text": "動いてさえいればバグなんて直さなくて大丈夫です"},
-    {"speaker": user_name, "text": "ほんまに、それでええんか？"},
 ]
 
 
@@ -392,7 +389,7 @@ if __name__ == "__main__":
         ### AIの返答
         response = ai_response(conversation_history)
         print(f"{ai_name}: " + response)
-        #subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
+        #subprocess.run("SeikaSay2.exe -cid nnnn -t \"{msg}\"".format(msg=response))
 
         ### 出力を会話履歴に追記
         conversation_history = conversation_history + "<NL>"+ f"{ai_name}: {response}"
