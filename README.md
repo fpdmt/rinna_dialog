@@ -84,9 +84,9 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 ```
 
    ### Tips
-- VRAM消費量の削減のためにデフォルトでFloat16での読み込みとなっています。その影響で**起動には約30秒以上**かかることが予想されます。
+- VRAM消費量の削減のためにデフォルトでFloat16での読み込みとなっています。その影響で**起動には約30秒程度（環境による）**かかることが予想されます。
    - dialog.py内の設定項目`F16_mode`より変更可。
-- 起動するとHuggingFaceから自動でモデルがダウンロードされ以下のディレクトリへキャッシュされます。
+- 起動するとHuggingFaceから自動でモデルがダウンロードされ、以下のディレクトリへキャッシュされます。
    - `C:\\Users\\{ユーザー名}\\.cache\\huggingface\\hub`
 - モデルを手動でダウンロードした場合は、後述の[Q&A]の手順でキャッシュ化が必要です。
 <br>
@@ -101,7 +101,8 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 ```
 
    ### Tips
-- venvを使用せずに、path通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。ただし環境も混ざるので一長一短。
+- venvを使用せずに、PATHを通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。
+    - ただし環境も混ざるので一長一短。
 - バッチファイルとかで自動化すると便利。
 
 <br>
@@ -128,7 +129,7 @@ import subprocess
 #対話ループ内の「### AIの返答」を探して、responseに代入し終わったあたりで、subprocessでSeikaSay2.exeに投げる。
 #response = ai_response(conversation_history)
 
-# SeikaSay2.exeのpathを通していない場合はフルpathで記述、cidの引数で話者を指定。
+# SeikaSay2.exeのPATHを通していない場合は絶対PATHで記述、cidの引数で話者を指定。
 # 以下の例だと、A.I.VOICE 紲星あかり。
 #
 subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
@@ -169,7 +170,7 @@ k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)
     Q : モデルのダウンロードが途中で止まってしまう！
     A : ブラウザでダウンロードした`pytorch_model.bin`をキャッシュの形式にして読み込ませることができます。
 
-        ・”models--rinna--japanese-gpt-neox-3.6b-instruction-sft.zip”をダウンロードして解凍のち以下のフォルダに移動。
+        ・”rinna_3.6b_withoutmodel_pack.zip”を解凍して以下のフォルダの中に移動。
             -> C:\Users\{users}\.cache\huggingface\hub
 
         ・中身を開いて以下のtxtを探す。
