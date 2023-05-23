@@ -159,6 +159,7 @@ ai_name = "AI"
 conversation_list = [
     {"speaker": user_name, "text": "このプログラムはなんですか？"},
     {"speaker": ai_name, "text": "りんなを即席対話型にしたものです"},
+    {"speaker": user_name, "text": "あなたは誰ですか？"},
 ]
 
 
