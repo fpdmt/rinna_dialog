@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-dialog_v3.2
+dialog_v3.3
 
 
 [概要]
@@ -12,9 +12,6 @@ dialog_v3.2
     CLI上でAIとチャットを出来るようにしたプログラムです。
 
 '''
-##################################################################################################################################################
-
-
 
 
 #################
@@ -36,8 +33,7 @@ ai_name = "AI"
 #
 conversation_list = [
     {"speaker": user_name, "text": "このプログラムはなんですか？"},
-    {"speaker": ai_name, "text": "りんなを即席対話型にしたものです"},
-    {"speaker": user_name, "text": "あなたは誰ですか？"},
+    {"speaker": ai_name, "text": "りんなを即席対話型にしたものです。"},
 ]
 
 
@@ -204,12 +200,12 @@ def show_all_configs():
     print(f"モデル名 : {model_name}")
     print(f"トークナイザ名 : {tokenizer_name}")
     print(f"プロセッサ : {processor}")
-    print(f"f16モード : {f16_mode}")
+    print(f"float16圧縮モード : {f16_mode}")
     print(f"max_lengh : {token_max_lengh}")
     print(f"temperature : {token_temperature}")
     print("")
     print("")
-    print("--- dialog_v3.2 ---")
+    print("--- dialog_v3.3 ---")
     print("")
     print("＜オプション＞ （'[]'も入力)")
     print("[break] : 終了")
@@ -231,11 +227,6 @@ def show_all_configs():
 if __name__ == "__main__":
 
     show_all_configs()
-
-    ### 初回返答。入力オプションの追加に伴い、対話ループの順序を変更。
-    response = ai_response(conversation_history)
-    print(f"{ai_name}: " + response)
-    conversation_history = conversation_history + "<NL>"+ f"{ai_name}: {response}"
     
     ### 対話ループ
     while True:
@@ -255,6 +246,7 @@ if __name__ == "__main__":
             conversation_history = conversation_list
             conversation_history = [f"{uttr['speaker']}: {uttr['text']}" for uttr in conversation_history]
             conversation_history = "<NL>".join(conversation_history)
+            continue
 
         elif user_input == "[remem]":
             show_conv_list()
