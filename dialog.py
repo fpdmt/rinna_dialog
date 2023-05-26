@@ -262,10 +262,13 @@ def update_ss2_state():
             continue
 
 
-def update_ss2_proc():
-    print("[ss2] exeプログラムの参照")
+def update_ss2_proc(current):
+    print("[ss2] exeプログラムの参照。入力せずにEnterキーで変更なし。")
     input_proc = input("保存先 : ")
-    return input_proc
+    if input_proc == "":
+        return current
+    else:
+        return input_proc
 
 
 def update_ss2_cid():
@@ -375,7 +378,7 @@ if __name__ == "__main__":
             show_ss2_config()
             print("")
             ss2_state = update_ss2_state()
-            ss2_proc = update_ss2_proc()
+            ss2_proc = update_ss2_proc(ss2_proc)
             ss2_cid = update_ss2_cid()
             for i in range(4):
                 print("")
