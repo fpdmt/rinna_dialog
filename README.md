@@ -119,21 +119,14 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 - [AssistantSeika](https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
 - AssistantSeikaに同梱の.\SeikaSay2\SeikaSay2.exe
 
-#### 実装手順
+#### ~~実装手順~~
 
-1. コード側に以下の2行を追記
+~~1. コード側に以下の2行を追記~~
 
-```python
-import subprocess
+V3.4より実装した`[ss2]`オプションによりプログラムを書き換えずに設定可能になりました。
+![3 4](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/d2dd399e-56eb-41ff-a0ed-f14c12f74835)
 
-#対話ループ内の「### AIの返答」を探して、responseに代入し終わったあたりで、subprocessでSeikaSay2.exeに投げる。
-#response = ai_response(conversation_history)
-
-# SeikaSay2.exeのPATHを通していない場合は絶対PATHで記述、cidの引数で話者を指定。
-# 以下の例だと、A.I.VOICE 紲星あかり。
-#
-subprocess.run("SeikaSay2.exe -cid 5209 -t \"{msg}\"".format(msg=response))
-```
+<br>
 
 #### 使用方法
 
