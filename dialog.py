@@ -211,7 +211,6 @@ def ai_response(input_dialog):
     response = tokenizer.decode(output_ids.tolist()[0][input_ids.size(1):])
     response = response.replace("<NL>", "\n")
     response = response.replace("</s>", "")
-
     return response
 
 
