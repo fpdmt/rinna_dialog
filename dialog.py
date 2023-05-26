@@ -220,8 +220,7 @@ def ai_response(input_dialog):
 def forget_conv_list(input_conv_history):
     conversation_list = input_conv_history.split("<NL>")
     if len(conversation_list) > max_conv_list:
-
-        print("flagged")
+        # print("[info] flagged")
         # "<NL>" を探して古い会話を1つ削除する
         index = input_conv_history.find("<NL>")
         if index != -1:
@@ -266,9 +265,8 @@ def update_ss2_state():
 
 def update_ss2_proc():
     print("[ss2] exeプログラムの参照")
-    while True:
-        input_proc = input("保存先 : ")
-        return input_proc
+    input_proc = input("保存先 : ")
+    return input_proc
 
 
 def update_ss2_cid():
