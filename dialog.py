@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-dialog_v3.3
+dialog_v3.4
 
 
 [概要]
@@ -10,6 +10,9 @@ dialog_v3.3
 
     対話型にファインチューニングされたrinna3.6B-instruction-sftを用いることで、
     CLI上でAIとチャットを出来るようにしたプログラムです。
+
+[修正予定]
+・generation configuration fileエラーメッセージを解決
 
 '''
 
@@ -27,9 +30,10 @@ ai_name = "AI"
 
 
 ####
-# AIの短期記憶リスト(会話履歴)　お好みで書き換え可。
-# <V3.3より修正> 対話ループの都合上、user入力 -> AI応答の繰り返しなので、
-# listの最後はaiとなるのが好ましい。（もちろんコード側を書き換えてもOK）
+# AIの短期記憶リスト(会話履歴)　お好みで書き換え可
+# 対話ループの都合上、user入力 -> AI返答の繰り返しなので、
+# listの最後はAI返答となるのが好ましい（もちろんコード側を書き換えてもOK）
+# (V3.3より変更)
 #
 conversation_list = [
     {"speaker": user_name, "text": "このプログラムはなんですか？"},
@@ -39,7 +43,7 @@ conversation_list = [
 
 ####
 # モデルの移動先。
-# "cuda"か"cpu"を指定。
+# "cuda"か"cpu"を指定
 #
 processor = "cuda"
 
@@ -53,10 +57,16 @@ f16_mode = True
 
 
 ####
-# max_lengthを増やすと会話が長続きする。
-# ※ただしvramと要相談。
+# max_lengthを増やすと会話が長続きする
+# ※ただしvramと要相談
 #
 token_max_lengh = 1024
+
+
+####
+# 会話履歴を保持する数
+#
+max_conv_list = 10
 
 
 ####
@@ -82,19 +92,45 @@ tokenizer_name = "AutoTokenizer"
 
 
 ####
-# モデル名。
+# モデル名
 #
 model_name = "rinna/japanese-gpt-neox-3.6b-instruction-sft"
+
+####
+# モデルコンフィグファイル
+#
+model_config_name = "config.json"
+
+
+###
+# SeikaSay2.exeの連携
+#
+ss2_state = False
+
+
+###
+# SeikaSay2.exeの保存先
+#
+ss2_proc = "SeikaSay2.exe"
+
+
+###
+# SeikaSay2 - cidの指定
+#
+ss2_cid = "00000"
+
 
 
 
 ### ここからコード
 ###################################################################################
 
-#import subprocess
+import os
+import subprocess
 import torch
-from transformers import T5Tokenizer, AutoTokenizer, AutoModelForCausalLM, file_utils
+from transformers import T5Tokenizer, AutoTokenizer, AutoModelForCausalLM
 
+model_config = os.path.join(os.path.dirname(__file__), "config.json")
 
 ### 事前学習済みモデルの読み込み
 if f16_mode == True:
@@ -104,7 +140,7 @@ if f16_mode == True:
 
 elif f16_mode == False:
     model = AutoModelForCausalLM.from_pretrained(
-                 model_name
+                 model_name, 
              )
 
 else:
@@ -129,7 +165,11 @@ else:
     tokenizer = AutoTokenizer.from_pretrained(
                 model_name, use_fast=False
              )
+    
 
+### Config.jsonのパスを取得
+# model_config = os.path.join(os.path.dirname(__file__), "config.json")
+# Generation_config = GenerationConfig.from_pretrained( "gpt2" )
 
 ### CUDAの検出
 if torch.cuda.is_available():
@@ -175,9 +215,90 @@ def ai_response(input_dialog):
     return response
 
 
-### （実装予定）忘却関数 - max_lenghが溢れた際の動作
-def forget_memory():
-    pass
+### 忘却関数 - max_lenghが溢れた際に古い会話履歴から削除していく
+#
+def forget_conv_list(input_conv_history):
+    conversation_list = input_conv_history.split("<NL>")
+    if len(conversation_list) > max_conv_list:
+
+        print("flagged")
+        # "<NL>" を探して古い会話を1つ削除する
+        index = input_conv_history.find("<NL>")
+        if index != -1:
+            ret_conv_list = input_conv_history[index+len("<NL>"):]
+
+    else:
+        ret_conv_list = input_conv_history
+
+    return ret_conv_list
+
+
+### SeikaSay2.exe設定
+#
+def update_ss2_state():
+    print("[ss2] SeikaSay2 連携状態")
+    print("")
+    print("< 設定 >")
+    print("1 : True")
+    print("2 : False")
+    print("")
+    print("< 現在の状態 >")
+    print(f"{ss2_state}")
+    print("")
+
+    while True:
+        input_state = input("入力 : ")
+
+        if not input_state.isdigit():
+            print("[Err] : 数字で入力してください。")
+            continue
+        
+        elif input_state == "1":
+            return True
+    
+        elif input_state == "2":
+            return False
+        
+        else:
+            print("[Err] : 不正な値です。")
+            continue
+
+
+def update_ss2_proc():
+    print("[ss2] exeプログラムの参照")
+    while True:
+        input_proc = input("保存先 : ")
+        return input_proc
+
+
+def update_ss2_cid():
+    print("[ss2] CharacterIDの変更")
+    while True:
+        input_cid = input("CIDを入力 : ")
+
+        if not input_cid.isdigit():
+            print("[Err] : CIDは数字で入力してください。")
+            continue
+
+        if user_input.strip() == "":
+            print("[Err] : 入力が空白です。もう一度入力してください。")
+            continue
+        
+        else:
+            cid_str = str(input_cid)
+            return int(cid_str)
+
+
+### SeikaSay2設定を表示する関数
+def show_ss2_config():
+    print("")
+    print("< SeikaSay2 設定 >")
+    print("")
+    print("< 現在の設定 >")
+    print(f"連携状態 : {ss2_state}")
+    print(f"SeikaSay2.exe保存先 : {ss2_proc}")
+    print(f"CharacterID : {ss2_cid}")
+    print("")
 
 
 ### 会話履歴を表示する関数
@@ -200,27 +321,28 @@ def show_all_configs():
     print(f"モデル名 : {model_name}")
     print(f"トークナイザ名 : {tokenizer_name}")
     print(f"プロセッサ : {processor}")
-    print(f"float16圧縮モード : {f16_mode}")
+    print(f"Float16圧縮モード : {f16_mode}")
     print(f"max_lengh : {token_max_lengh}")
     print(f"temperature : {token_temperature}")
+    show_ss2_config()
     print("")
     print("")
-    print("--- dialog_v3.3 ---")
+    print("--- dialog_v3.4 ---")
     print("")
     print("＜オプション＞ （'[]'も入力)")
     print("[break] : 終了")
     print("[clear] : 会話履歴を起動時の状態に戻す")
     print("[remem] : これまでの会話履歴を表示")
-    
-    ### モデルの保存先
-    # デフォルト C:\Users\{ユーザー名}\.cache\huggingface\hub
+    print("[ss2] : SeikaSay2で音声を再生するキャラクターを変更")
     print("")
+    ### モデルの保存先
     print("＜モデルの保存先＞")
     print("C:\\Users\\ユーザー名\\.cache\\huggingface\\hub")
     #print(file_utils.default_cache_path)
     
     ### 事前に入力した会話履歴の表示
     show_conv_list()
+
 
 
 
@@ -252,6 +374,18 @@ if __name__ == "__main__":
             show_conv_list()
             continue
 
+        elif user_input == "[ss2]":
+            show_ss2_config()
+            print("")
+            ss2_state = update_ss2_state()
+            ss2_proc = update_ss2_proc()
+            ss2_cid = update_ss2_cid()
+            for i in range(4):
+                print("")
+            print("[ss2] 設定が更新されました。")
+            show_ss2_config()
+            continue
+
         else:
             ### 入力を会話履歴に追記
             conversation_history = conversation_history + "<NL>" + f"{user_name}: {user_input}"
@@ -260,7 +394,17 @@ if __name__ == "__main__":
         ### AIの返答
         response = ai_response(conversation_history)
         print(f"{ai_name}: " + response)
-        #subprocess.run("SeikaSay2.exe -cid nnnn -t \"{msg}\"".format(msg=response))
+
+        if ss2_state == True:
+            args =  f"\"{ss2_proc}\""
+            args += f" -cid \"{ss2_cid}\""
+            args += f" -t \"{response}\""
+            subprocess.run(args)
+
 
         ### 出力を会話履歴に追記
         conversation_history = conversation_history + "<NL>"+ f"{ai_name}: {response}"
+
+        ### 会話が増えすぎたら古い履歴から削除
+        conversation_history = forget_conv_list(conversation_history)
+        
