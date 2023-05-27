@@ -123,7 +123,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 
 ~~1. コード側に以下の2行を追記~~
 
-V3.4より実装した`[ss2]`オプションにより、プログラムを書き換えずに設定が可能になりました。
+V3.4より実装した`[ss2]`オプションにより、dialog.pyを書き換えずに設定が可能になりました。
 ![3 4](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/d2dd399e-56eb-41ff-a0ed-f14c12f74835)
 
 <br>
