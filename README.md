@@ -162,19 +162,8 @@ k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)
     A : モデル名を変更すればHuggingFaceからダウンロードされてキャッシュとして読み込まれますが、正常に動作するかはわかりません。
 
     Q : モデルのダウンロードが途中で止まってしまう！
-    A : ブラウザでダウンロードした`pytorch_model.bin`をキャッシュの形式にして読み込ませることができます。
+    A : モデル名に絶対パスを指定するとローカルモデルを読み込ませることができます。
 
-        ・”rinna_3.6b_withoutmodel_pack.zip”を解凍して以下のフォルダの中に移動。
-            -> C:\Users\{users}\.cache\huggingface\hub
-
-        ・中身を開いて以下のtxtを探す。
-          models--rinna--japanese-gpt-neox-3.6b-instruction-sft\blobs\0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b.txt
-
-        ・`pytorch_model.bin`を「0c6124c628f8ecc29be1b6ee0625670062340f5b99cfe543ccf049fa90e6207b」にリネーム。
-
-        ・最後にtxtファイルをゴミ箱へいれて完了。
-
-![239520047-196673e6-d4ca-480c-8ae6-299620fc71dc](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/2dfa69e9-5cc8-4172-86b0-543a1d2de697)
 
 
 ## [謝辞]
