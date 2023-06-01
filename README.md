@@ -3,11 +3,15 @@
 
 ## [概要]
 
-対話型にファインチューニングされたrinna3.6B-instruction-sftを用いることで、
+対話型にファインチューニングされたrinna3.6Bを用いることで、
 ローカル環境のCLI上でAIとチャットを出来るようにしたプログラムです。
-    
+
+動作確認済モデル
+* [rinna/japanese-gpt-neox-3.6b](https://huggingface.co/rinna/japanese-gpt-neox-3.6b)
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
-  
+* [rinna/japanese-gpt-neox-3.6b-instruction-sft-v2](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft-v2)
+* [rinna/japanese-gpt-neox-3.6b-instruction-ppo](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-ppo)
+
 ![a2](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7d34f584-2184-489e-9dcf-6594c72a50b0)
 
 <br>
