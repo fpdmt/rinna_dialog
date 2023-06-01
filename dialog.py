@@ -71,12 +71,12 @@ max_conv_list = 10
 ###
 # AI返答の最後にユーザーのセリフが含まれている場合は削除する。
 #
-skip_responce = True
+skip_response = True
 
 
 ###
 # 長文生成の設定。
-# 読点'。'を起点にして、以下で設定した値以上の文が生成された場合はそれ以降を削除する。
+# 読点'。'を区切りとして、以下で設定した値以上の文が生成された場合はそれ以降を削除する。
 #
 sentence_limit = 5
 
@@ -250,7 +250,7 @@ def ai_response(input_dialog):
     response = tokenizer.decode(output_ids.tolist()[0][input_ids.size(1):])
 
     ### 返答にユーザーの入力が含まれている場合は削除
-    if skip_responce:
+    if skip_response:
         if f"{user_name}: " in response:
             response = response.split(f"{user_name}: ")[0]
 
@@ -266,7 +266,7 @@ def ai_response(input_dialog):
     return response
 
 
-### 忘却関数 - max_lenghが溢れた際に古い会話履歴から削除していく
+### 忘却関数 - max_conv_listが溢れた際に古い会話履歴から1つずつ削除。
 #
 def forget_conv_list(input_conv_history):
     conversation_list = input_conv_history.split("<NL>")
@@ -282,7 +282,7 @@ def forget_conv_list(input_conv_history):
     return ret_conv_list
 
 
-### SeikaSay2.exe設定
+### SeikaSay2.exe設定。
 #
 def update_ss2_state():
     print("[ss2] SeikaSay2 連携状態")
@@ -368,7 +368,7 @@ def show_all_configs():
     print(f"Float16圧縮モード : {f16_mode}")
     print(f"max_lengh : {token_max_lengh} / max_conv_list : {max_conv_list}")
     print(f"temperature : {token_temperature} / repetition_penalty : {token_repetition_penalty}")
-    print(f"skip_responce : {skip_responce} / sentence_limit : {sentence_limit}")
+    print(f"skip_response : {skip_response} / sentence_limit : {sentence_limit}")
     show_ss2_config()
     print("")
     print("")
