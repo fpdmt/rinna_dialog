@@ -118,7 +118,7 @@ D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
 
    ### Tips
-- venvを使用せずに、PATHを通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。
+- venvを使用せずに、PATHを通したpythonに直接要求パッケージをいれると```python dialog.py```だけで動きます。
     - ただし環境も混ざるので一長一短。
 - バッチファイルとかで自動化すると便利。
 
@@ -133,7 +133,8 @@ D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
 - Windows OS環境
 - voiceroid, voiceroid2, A.I.VOICE, 棒読みちゃん, softalkなどの音声合成ソフト
-- [AssistantSeika](https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
+- AssistantSeika
+  - (https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
 - AssistantSeikaに同梱の.\SeikaSay2\SeikaSay2.exe
 
 #### ~~実装手順~~
