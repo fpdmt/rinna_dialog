@@ -69,8 +69,6 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 ## [ Get Started! ]
 
-<br>
-
 ### 前提パッケージ
 
 - git_for_windows
