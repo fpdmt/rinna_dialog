@@ -6,6 +6,8 @@
 rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用いることで、
 ローカル環境のCLI上でAIとチャットを出来るようにしたプログラムです。
 
+<br>
+
 動作確認済モデル
 * [rinna/japanese-gpt-neox-3.6b](https://huggingface.co/rinna/japanese-gpt-neox-3.6b)
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
