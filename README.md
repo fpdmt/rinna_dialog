@@ -1,7 +1,7 @@
 # ***rinna_dialog***
 
 
-## [概要]
+## [ 概要 ]
 
 rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用いることで、
 ローカル環境のCLI上でAIとチャットを出来るようにしたプログラムです。
@@ -16,7 +16,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 <br>
 
-## [テスト環境]
+## [ テスト環境 ]
 
      ### 最小動作環境
      ・CPU : 指定なし
@@ -55,8 +55,9 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 <br>
 
 
-## [Requirements]          
+## [ Requirements ]          
 ```
+- git
 - cuda 11.7
 - python == 3.10.6
 - torch == 1.13.1+cu117
@@ -65,30 +66,32 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 <br>
 
 ## [Get Started!]
+
+### 前提パッケージ
+
    *[git_for_windows](https://gitforwindows.org/index.html)
    
    *[Python3.10.6_Windows_installer(64-bit)](https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe)
-   
-   *[仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
+     - [仮想環境: Python環境構築ガイド](https://www.python.jp/install/windows/venv.html)
    
 ### 初回起動
-```
-D:\> git clone https://github.com/AlgosErgo/rinna_dialog
+
+D:\> ```git clone https://github.com/AlgosErgo/rinna_dialog```
         
-D:\> cd rinna_dialog
+D:\> ```cd rinna_dialog```
 
-D:\rinna_dialog> py -3.10 -m venv rinna_venv
+D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
 
-D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
+D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
-(rinna_venv) D:\rinna_dialog> pip install -r requirements.txt
+(rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
 
-(rinna_venv) D:\rinna_dialog> python.exe -m pip install --upgrade pip
+(rinna_venv) D:\rinna_dialog> ```python.exe -m pip install --upgrade pip```
 
-(rinna_venv) D:\rinna_dialog> pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+(rinna_venv) D:\rinna_dialog> ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117```
  
-(rinna_venv) D:\rinna_dialog> python dialog.py
-```
+(rinna_venv) D:\rinna_dialog> ```python dialog.py```
+
 
    ### Tips
 - VRAM消費量の削減のためにデフォルトで`Float16`での読み込みとなっています。その影響で環境によっては**起動に60秒以上**かかることが予想されます。
