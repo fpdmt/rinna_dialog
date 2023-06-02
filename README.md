@@ -82,9 +82,9 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 ### 初回起動
 
-D:\> ```git clone https://github.com/AlgosErgo/rinna_dialog```
+D:\ > ```git clone https://github.com/AlgosErgo/rinna_dialog```
         
-D:\> ```cd rinna_dialog```
+D:\ > ```cd rinna_dialog```
 
 D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
 
@@ -110,7 +110,7 @@ D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
 ### 次回以降の起動手順
 
-D:\> ```cd rinna_dialog```
+D:\ > ```cd rinna_dialog```
          
 D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
          
