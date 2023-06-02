@@ -67,7 +67,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 ```
 <br>
 
-## [Get Started!]
+## [ Get Started! ]
 
 <br>
 
@@ -111,13 +111,13 @@ D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 <br>
 
 ### 次回以降の起動手順
-```
-D:\> cd rinna_dialog
+
+D:\> ```cd rinna_dialog```
          
-D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
+D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
          
-(rinna_venv) D:\rinna_dialog> python dialog.py
-```
+(rinna_venv) D:\rinna_dialog> ```python dialog.py```
+
 
    ### Tips
 - venvを使用せずに、PATHを通したpythonに直接要求パッケージをいれるとdialog.pyだけで動きます。
@@ -126,7 +126,7 @@ D:\rinna_dialog> .\rinna_venv\Scripts\activate.bat
 
 <br>
 
-## [音声合成ソフトとの連携方法]
+## [ 音声合成ソフトとの連携方法 ]
 
 ### 1. AssistantSeika - SeikaSay2.exeを使用した方法
 ![akari_2222](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/1eb6a4c2-aa62-4856-a43d-1b5becf18a69)
@@ -184,7 +184,7 @@ k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)
 
 
 
-## [謝辞]
+## [ 謝辞 ]
 
 AssistantSeika製作者様
 
@@ -194,7 +194,7 @@ k896951様
 /liveuranus/1678930450/l50
 
 
-## [Lisence]
+## [ Lisence ]
 This project is licensed under the MIT License, see the LICENSE.txt file for details
 
 
