@@ -108,7 +108,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 9. dialog.pyを起動。
      - (rinna_venv) D:\rinna_dialog> ```python dialog.py```
 
-
+<br>
    ### Tips
 - VRAM消費量の削減のためにデフォルトで`Float16`での読み込みとなっています。その影響で環境によっては**起動に60秒以上**かかることが予想されます。
    - dialog.py内の設定項目`F16_mode`より変更可。
@@ -126,7 +126,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 3. (rinna_venv) D:\rinna_dialog> ```python dialog.py```
 
-
+<br>
    ### Tips
 - venvを使用せずに、PATHを通したpythonに直接要求パッケージをいれると```python dialog.py```だけで動きます。
     - ただし環境も混ざるので一長一短。
