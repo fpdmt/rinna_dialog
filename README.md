@@ -60,8 +60,8 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 ## [ Requirements ]          
 ```
 - git
-- cuda 11.7
 - python == 3.10.6
+- cuda 11.7
 - torch == 1.13.1+cu117
 - transformers == 4.29.2
 ```
