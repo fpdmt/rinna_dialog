@@ -134,7 +134,7 @@ tokenizer_name = "AutoTokenizer"
 #       - rinna/japanese-gpt-neox-3.6b-instruction-sft-v2
 #       - rinna/japanese-gpt-neox-3.6b-instruction-ppo
 #
-model_name = "rinna/japanese-gpt-neox-3.6b-instruction-sft-v2"
+model_name = "rinna/japanese-gpt-neox-3.6b-instruction-ppo"
 
 
 ####
