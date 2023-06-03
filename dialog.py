@@ -87,7 +87,7 @@ sentence_limit = 5
 #   - True  : 旧rinna 3.6b (instruction-sft, japanese-gpt-neox-3.6b)
 #   - False : 新rinna 3.6b (instruction-ppo, instruction-sft-v2)
 #
-token_padding = False
+token_padding = True
 
 
 ### AI出力のオウム返し対策。（すでに生成された単語や文脈に属する単語にペナルティ）
