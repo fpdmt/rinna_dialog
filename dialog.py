@@ -86,6 +86,7 @@ sentence_limit = 5
 #  <参考 : transformersのTokenizerで固定長化する : https://megalodon.jp/2023-0520-1121-10/https://moneyforward-dev.jp:443/entry/2021/10/05/transformers-tokenizer/>
 #   - True  : 旧rinna 3.6b (instruction-sft, japanese-gpt-neox-3.6b)
 #   - False : 新rinna 3.6b (instruction-ppo, instruction-sft-v2)
+#   (23.06.03訂正: 新旧ともにTrueで良い模様。）
 #
 token_padding = True
 
