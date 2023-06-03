@@ -96,7 +96,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 5. rinna_venvを有効化。
      - D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
-6. Pythonパッケージをインストール。
+6. Pythonパッケージを一括インストール。
      - (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
 
 7. pipをアップデート。
