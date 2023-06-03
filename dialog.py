@@ -297,7 +297,7 @@ def update_ss2_state():
     print("")
 
     while True:
-        input_state = input("入力 : ")
+        input_state = input("入力[1-2] : ")
 
         if not input_state.isdigit():
             print("[Err] : 数字で入力してください。")
