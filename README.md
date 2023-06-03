@@ -87,7 +87,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 2. リポジトリをクローン。
      - D:\ > ```git clone https://github.com/AlgosErgo/rinna_dialog```
 
-3. クローンしたフォルダ内へ移動。
+3. クローンしたリポジトリのフォルダ内へ移動。
      - D:\ > ```cd rinna_dialog```
 
 4. Python仮想環境、rinna_venvを作成。
