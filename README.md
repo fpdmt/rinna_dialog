@@ -93,7 +93,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 4. Python仮想環境、rinna_venvを作成。
      - D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
 
-5. `rinna_venv`を有効化。
+5. rinna_venvを有効化。
      - D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
 6. Pythonパッケージをインストール。
