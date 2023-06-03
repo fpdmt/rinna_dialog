@@ -67,6 +67,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 ```
 
 前提パッケージ
+<br>
      - git_for_windows
     　  - (https://gitforwindows.org/index.html)
     
