@@ -82,21 +82,21 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 ### 初回起動
 
-D:\ > ```git clone https://github.com/AlgosErgo/rinna_dialog```
-        
-D:\ > ```cd rinna_dialog```
+1. D:\ > ```git clone https://github.com/AlgosErgo/rinna_dialog```
 
-D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
+2. D:\ > ```cd rinna_dialog```
 
-D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
+3. D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
 
-(rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
+4. D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
-(rinna_venv) D:\rinna_dialog> ```python.exe -m pip install --upgrade pip```
+5. (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
 
-(rinna_venv) D:\rinna_dialog> ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117```
- 
-(rinna_venv) D:\rinna_dialog> ```python dialog.py```
+6. (rinna_venv) D:\rinna_dialog> ```python.exe -m pip install --upgrade pip```
+
+7. (rinna_venv) D:\rinna_dialog> ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117```
+
+8. (rinna_venv) D:\rinna_dialog> ```python dialog.py```
 
 
    ### Tips
@@ -110,11 +110,11 @@ D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
 ### 次回以降の起動手順
 
-D:\ > ```cd rinna_dialog```
-         
-D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
-         
-(rinna_venv) D:\rinna_dialog> ```python dialog.py```
+1. D:\ > ```cd rinna_dialog```
+
+2. D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
+
+3. (rinna_venv) D:\rinna_dialog> ```python dialog.py```
 
 
    ### Tips
