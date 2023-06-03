@@ -147,7 +147,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 - Windows OS環境
 - voiceroid, voiceroid2, A.I.VOICE, 棒読みちゃん, softalkなどの音声合成ソフト
 - AssistantSeika
-  - (https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a)
+  - https://wiki.hgotoh.jp/documents/tools/assistantseika/assistantseika-001a
 - AssistantSeikaに同梱の.\SeikaSay2\SeikaSay2.exe
 
 #### ~~実装手順~~
