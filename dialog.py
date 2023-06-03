@@ -25,7 +25,7 @@ https://github.com/AlgosErgo/rinna_dialog
 
 
 
-#///////// [ ユーザー設定 ] ////////////
+#========= [ ユーザー設定 ] =========
 
 ####
 # 好きな名前を入れてね
@@ -47,7 +47,7 @@ conversation_list = [
 
 
 
-#///////// [ 文章生成設定 ] /////////
+#========= [ 文章生成設定 ] =========
 
 ####
 # temperatureが低いほど一貫性がある出力を、高くなるほど多様な出力をするようになる。
@@ -100,7 +100,7 @@ token_repetition_penalty = 1.1
 
 
 
-#///////// [ モデルの読み込み ] /////////
+#========= [ モデルの読み込み ] =========
 
 ####
 # モデルの移動先。
@@ -144,7 +144,7 @@ model_name = "rinna/japanese-gpt-neox-3.6b-instruction-sft-v2"
 
 
 
-#///////// [ AssistantSeika ] /////////
+#========= [ AssistantSeika ] =========
 
 ###
 # SeikaSay2.exeの連携。
