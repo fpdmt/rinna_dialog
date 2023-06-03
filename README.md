@@ -178,7 +178,7 @@ k896951様より情報提供頂いた[voxsay](https://github.com/k896951/voxsay)
 ## [Q&A]
 
     Q : なんかエラーが出た！
-    A : [Get Started!]を参考に再構築してみましょう。
+    A : [Get Started!]を参考に再構築してみましょう。その際にrinna_venvフォルダはそのまま削除しても問題ありません。
 
     Q : 実行すると、`t = torch.tensor([], （略）`と出て固まる！
     A : cudaを使用している場合でもモデルは一度RAMへ読み込まれてからVRAMに展開されます。
