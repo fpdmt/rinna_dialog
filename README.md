@@ -82,21 +82,31 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 ### 初回起動
 
-1. D:\ > ```git clone https://github.com/AlgosErgo/rinna_dialog```
+1. コマンドプロンプトを管理者権限で実行し、rinna_dialogを保存するフォルダへ移動。
 
-2. D:\ > ```cd rinna_dialog```
+2. リポジトリをクローン。
+     D:\ > ```git clone https://github.com/AlgosErgo/rinna_dialog```
 
-3. D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
+3. クローンしたフォルダ内へ移動。
+     D:\ > ```cd rinna_dialog```
 
-4. D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
+4. Python仮想環境 `rinna_venv`を作成。
+     D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
 
-5. (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
+5. `rinna_venv`を有効化。
+     D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
-6. (rinna_venv) D:\rinna_dialog> ```python.exe -m pip install --upgrade pip```
+6. Pythonパッケージをインストール。
+     (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
 
-7. (rinna_venv) D:\rinna_dialog> ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117```
+7. pipをアップデート。
+     (rinna_venv) D:\rinna_dialog> ```python.exe -m pip install --upgrade pip```
 
-8. (rinna_venv) D:\rinna_dialog> ```python dialog.py```
+8. PyTorchをインストール。
+     (rinna_venv) D:\rinna_dialog> ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117```
+
+9. dialog.pyを起動。
+     (rinna_venv) D:\rinna_dialog> ```python dialog.py```
 
 
    ### Tips
