@@ -80,7 +80,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 <br>
 
-### 初回起動 for beginners
+### 初回起動 for beginners.
 
 1. コマンドプロンプトを管理者権限で実行し、rinna_dialogを保存するディレクトリへ移動。
 
