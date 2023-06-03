@@ -67,15 +67,12 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 ```
 
 前提パッケージ
-
-<br>
-
-     - git_for_windows
-    　  - (https://gitforwindows.org/index.html)
+- git_for_windows
+  - (https://gitforwindows.org/index.html)
     
-     - Python3.10.6
-       - (https://www.python.org/downloads/release/python-3106/) 
-       - (https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe)
+- Python3.10.6
+  - (https://www.python.org/downloads/release/python-3106/) 
+  - (https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe)
 
 <br>
 
