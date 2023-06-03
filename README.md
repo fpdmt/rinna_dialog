@@ -90,7 +90,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 3. クローンしたフォルダ内へ移動。
      - D:\ > ```cd rinna_dialog```
 
-4. Python仮想環境 `rinna_venv`を作成。
+4. Python仮想環境、rinna_venvを作成。
      - D:\rinna_dialog> ```py -3.10 -m venv rinna_venv```
 
 5. `rinna_venv`を有効化。
