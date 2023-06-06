@@ -6,13 +6,15 @@
 ## [ 概要 ]
 
 rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用いることで、
-ローカル環境のCLI上でAIとチャットを出来るようにしたプログラムです。
+ローカル環境のCLI上でAIとチャットを出来るようにしたプログラムです。<br>
+
 
 #### 動作確認済モデル
 * [rinna/japanese-gpt-neox-3.6b](https://huggingface.co/rinna/japanese-gpt-neox-3.6b)
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft-v2](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft-v2)
 * [rinna/japanese-gpt-neox-3.6b-instruction-ppo](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-ppo)
+
 
 #### 後述のAssistantSeikaとの連携により音声合成ソフトで自動読み上げが可能です。
 
@@ -33,25 +35,27 @@ https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b4
                 （"model:8GB"+"venv:6GB"）
      
      ### "cuda"指定時のVRAM使用率推移
-        - RTX4090, VRAM24GB, max_length=256設定
-            アイドル時 : 2.4 GB
-            実行時 : 17.6 GB
-            5発話でmax_lengthがフロー : 18.1 GB
-            レスポンスタイム : 1 ~ 5秒 (体感)
-
-        - TESLA P40, VRAM24GB, max_length=256設定
-            アイドル時 : 0 GB
-            実行時 : 15.7 GB
-            5発話でmax_lengthがフロー : 16.3 GB
-            レスポンスタイム : 5 ~ 8秒 (体感)
-            備考 : ebayで中古3万円、お得!
-
+     
         - RTX3080Ti, VRAM12GB, float16指定, max_length=256設定
             アイドル時 : 0 GB
             実行時 : 8.4 GB
             5発話でmax_lengthがフロー :  8.8 GB
             レスポンスタイム : 2 ~ 5秒 (体感)
             備考 : SATA SSDで実行。実行時の読み込みに60秒くらい掛かる模様
+           
+        - TESLA P40, VRAM24GB, max_length=256設定
+            アイドル時 : 0 GB
+            実行時 : 15.7 GB
+            5発話でmax_lengthがフロー : 16.3 GB
+            レスポンスタイム : 5 ~ 8秒 (体感)
+            備考 : ebayで中古3万円、お得!
+            
+        - RTX4090, VRAM24GB, max_length=256設定
+            アイドル時 : 2.4 GB
+            実行時 : 17.6 GB
+            5発話でmax_lengthがフロー : 18.1 GB
+            レスポンスタイム : 1 ~ 5秒 (体感)
+            
             
      ### "cpu"指定時のRAM使用率推移
         - 5950x, RAM64GB, max_length=256設定
