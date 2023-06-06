@@ -1,6 +1,8 @@
 # ***rinna_dialog***
 
 
+<img src="https://github.com/AlgosErgo/rinna_dialog/assets/122419883/e0ff2b36-42b7-49fb-ab5f-5ef84b11041b" width="50%">
+
 ## [ 概要 ]
 
 rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用いることで、
@@ -13,8 +15,6 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft-v2](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft-v2)
 * [rinna/japanese-gpt-neox-3.6b-instruction-ppo](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-ppo)
-
-<img src="https://github.com/AlgosErgo/rinna_dialog/assets/122419883/e0ff2b36-42b7-49fb-ab5f-5ef84b11041b" width="50%">
 
 <br>
 
