@@ -1,7 +1,7 @@
 # ***rinna_dialog***
 
 
-<img src="https://github.com/AlgosErgo/rinna_dialog/assets/122419883/e0ff2b36-42b7-49fb-ab5f-5ef84b11041b" width="40%">
+<img src="https://github.com/AlgosErgo/rinna_dialog/assets/122419883/e0ff2b36-42b7-49fb-ab5f-5ef84b11041b" width="60%">
 
 ## [ 概要 ]
 
