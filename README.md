@@ -79,8 +79,6 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 ## [ Get Started! ]
 
-<br>
-
 ### 初回起動 for beginners.
 
 <<Windows環境の場合。>><br>
