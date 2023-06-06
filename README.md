@@ -74,6 +74,9 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
   - https://www.python.org/downloads/release/python-3106/
   - https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe
 
+- CUDA Toolkit 11.7 Downloads
+  - https://developer.nvidia.com/cuda-11-7-0-download-archive
+
 <br>
 
 ## [ Get Started! ]
