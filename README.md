@@ -15,7 +15,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 * [rinna/japanese-gpt-neox-3.6b-instruction-ppo](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-ppo)
 
  <img src="https://github.com/AlgosErgo/rinna_dialog/assets/122419883/e0ff2b36-42b7-49fb-ab5f-5ef84b11041b" width="50%">
- <img src="https://github.com/AlgosErgo/rinna_dialog/assets/122419883/79471413-e7f5-4cba-8daa-897e20112aa5" width="50%">
+"https://github.com/AlgosErgo/rinna_dialog/assets/122419883/79471413-e7f5-4cba-8daa-897e20112aa5"
 
 
 
