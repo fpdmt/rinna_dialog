@@ -18,8 +18,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 <br>
 
-https://github.com/AlgosErgo/rinna_dialog/assets/122419883/79471413-e7f5-4cba-8daa-897e20112aa5
-
+https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b428-f819ce704257
 
 
 <br>
