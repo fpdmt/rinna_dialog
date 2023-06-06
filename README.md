@@ -21,6 +21,7 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 ## [ テスト環境 ]
 
      ### 最小動作環境
+     ・OS  : Windows10, Ubuntu22.04
      ・CPU : 指定なし
      ・GPU : VRAM 8GB以下では、3発話程度で強制終了。
      ・RAM : 16GB以下では読み込み時にスワップが発生。
@@ -81,6 +82,8 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 <br>
 
 ### 初回起動 for beginners.
+
+<<Windows環境の場合。>><br>
 
 1. コマンドプロンプトを管理者権限で実行し、rinna_dialogを保存するディレクトリへ移動。
 
