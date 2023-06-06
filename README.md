@@ -10,15 +10,15 @@ rinna株式会社が公開しているGPT言語モデル「rinna3.6B」を用い
 
 <br>
 
-動作確認済モデル
+#### 動作確認済モデル
 * [rinna/japanese-gpt-neox-3.6b](https://huggingface.co/rinna/japanese-gpt-neox-3.6b)
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft)
 * [rinna/japanese-gpt-neox-3.6b-instruction-sft-v2](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-sft-v2)
 * [rinna/japanese-gpt-neox-3.6b-instruction-ppo](https://huggingface.co/rinna/japanese-gpt-neox-3.6b-instruction-ppo)
 
 <br>
-
-![音声合成ソフトでの自動読み上げに対応](https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b428-f819ce704257)
+#### 音声合成ソフトとの連携により自動読み上げに対応しました。使い方等は後述。
+https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b428-f819ce704257
 
 
 <br>
