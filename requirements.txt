@@ -65,9 +65,6 @@ tensorflow-gpu==2.10.1
 tensorflow-io-gcs-filesystem==0.29.0
 termcolor==2.3.0
 tokenizers==0.13.3
-torch==2.0.1+cu117
-torchaudio==2.0.2+cu117
-torchvision==0.15.2+cu117
 tqdm==4.65.0
 transformers==4.29.2
 trio==0.22.0
