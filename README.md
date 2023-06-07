@@ -111,11 +111,11 @@ https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b4
 5. rinna_venvを有効化。
      - D:\rinna_dialog> ```.\rinna_venv\Scripts\activate.bat```
 
-6. Pythonパッケージを一括インストール。
-     - (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
-
-7. pipをアップデート。
+6. pipをアップデート。
      - (rinna_venv) D:\rinna_dialog> ```python.exe -m pip install --upgrade pip```
+
+7. Pythonパッケージを一括インストール。
+     - (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
 
 8. PyTorchをインストール。
      - (rinna_venv) D:\rinna_dialog> ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117```
