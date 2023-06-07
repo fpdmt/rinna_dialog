@@ -98,7 +98,7 @@ https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b4
 ### 初回起動 for beginners.
 
 
-<br><< Windows環境 >><br>
+<br><< Windows環境 >> (V3.7より一部変更)<br>
 
 1. コマンドプロンプトを管理者権限で実行し、rinna_dialogを保存するディレクトリへ移動。
 
@@ -117,11 +117,11 @@ https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b4
 6. pipをアップデート。
      - (rinna_venv) D:\rinna_dialog> ```python.exe -m pip install --upgrade pip```
 
-7. Pythonパッケージを一括インストール。
-     - (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
-
-8. PyTorchをインストール。
+7. PyTorchをインストール。
      - (rinna_venv) D:\rinna_dialog> ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117```
+
+8. Pythonパッケージを一括インストール。
+     - (rinna_venv) D:\rinna_dialog> ```pip install -r requirements.txt```
 
 9. dialog.pyを起動。
      - (rinna_venv) D:\rinna_dialog> ```python dialog.py```
