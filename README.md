@@ -71,10 +71,13 @@ https://github.com/AlgosErgo/rinna_dialog/assets/122419883/7776b07e-fe16-41fd-b4
 ## [ Requirements ]          
 ```
 - git
-- python == 3.10.6
+- python==3.10.6
 - cuda 11.7
-- torch == 1.13.1+cu117
-- transformers == 4.29.2
+- torch==1.13.1+cu117
+- transformers==4.29.2
+- peft==0.2.0
+- PyAudio==0.2.13
+- SpeechRecognition==3.10
 ```
 
 前提パッケージ
@@ -214,11 +217,11 @@ A : モデル名に絶対パスを指定するとローカルモデルを読み�
 Q : Linux環境でも動く？
 A : Ubuntu22.04での正常動作は確認できていますが、ほかの環境での動作はわかりません。
 
-Q : 以下のエラーメッセージが出る！
-    `UserWarning: You have modified the pretrained model configuration to control generation. `
-    
+Q : このエラーは大丈夫？ `UserWarning: You have modified the pretrained model configuration to control generation. `
 A : そのままでも動作に問題はありませんが、エラーメッセージに従い次の部分をコメントアウトすることで消すことができます。
-     .\rinna_venv\lib\site-packages\transformers\generation\utils.py : 1255行目～1260行目
+
+     .\rinna_venv\lib\site-packages\transformers\generation\utils.py
+     1255行目～1260行目
      #warnings.warn(
      # "You have modified the pretrained model configuration to control generation. This is a"
      # " deprecated strategy to control generation and will be removed soon, in a future version."
