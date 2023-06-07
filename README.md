@@ -219,7 +219,6 @@ A : Ubuntu22.04での正常動作は確認できていますが、ほかの環�
 
 Q : このエラーは大丈夫？ `UserWarning: You have modified the pretrained model configuration to control generation. `
 A : そのままでも動作に問題はありませんが、エラーメッセージに従い次の部分をコメントアウトすることで消すことができます。
-
      .\rinna_venv\lib\site-packages\transformers\generation\utils.py
      1255行目～1260行目
      #warnings.warn(
@@ -228,8 +227,11 @@ A : そのままでも動作に問題はありませんが、エラーメッセ�
      # " Please use a generation configuration file (see"
      # " https://huggingface.co/docs/transformers/main_classes/text_generation)"
      #)
-     
-     
+
+Q : モデルがVRAMに移動されない！
+A : 当該現象はPyTorchのインストールよりも先に、peftをインストールすると発生するようです。
+    V3.7よりpeft_LoRAの読込み機能を追加した都合で、初回起動の順序を一部変更しましたので、そちらをご参照ください。
+
 ```
 
 
